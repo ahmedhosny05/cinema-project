@@ -89,7 +89,7 @@
      <string>Register</string>
     </property>
    </widget>
-   <widget class="QLabel" name="status">
+   <widget class="QLabel" name="error">
     <property name="geometry">
      <rect>
       <x>110</x>

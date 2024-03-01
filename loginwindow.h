@@ -17,6 +17,13 @@ public:
     LoginWindow(QWidget *parent = nullptr);
     ~LoginWindow();
 
+private slots:
+    void on_status_linkActivated(const QString &link);
+
+    void on_login_clicked();
+
+    void on_register_2_clicked();
+
 private:
     Ui::LoginWindow *ui;
 };
