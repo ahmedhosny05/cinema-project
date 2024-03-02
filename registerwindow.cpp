@@ -1,6 +1,6 @@
 #include "registerwindow.h"
 #include "ui_registerwindow.h"
-
+#include "Users.h"
 
 RegisterWindow::RegisterWindow(QWidget *parent)
     : QDialog(parent)
@@ -9,8 +9,8 @@ RegisterWindow::RegisterWindow(QWidget *parent)
     ui->setupUi(this);
     ui-> message -> setVisible(false);
     ui->message2->setVisible(false) ;
-    ui->label_9->setVisible(false) ;
-    ui->label_12->setVisible(false) ;
+    ui->year1->setVisible(false) ;
+    ui->message10->setVisible(false) ;
 
 
 
@@ -31,14 +31,14 @@ void RegisterWindow::on_register_2_clicked()
     bool gender1 = ui-> gender->isChecked() ;
     bool account1 =ui->account->isChecked() ;
     bool genre = ui -> genrebox-> isChecked() ;
+    QString selectedOption = ui->monthcombo->currentText();
 
     bool ok;
     int year = ui->year->text().toInt(&ok);
-
     if(username.isEmpty()||password.isEmpty()||repassword.isEmpty()||day1.isEmpty()||year1.isEmpty())
     {
-        ui->message->setVisible(true) ;
-        ui->message->setText(" Please fill all ") ;
+        ui->message10->setVisible(true) ;
+        ui->message10->setText(" Please fill all ") ;
         return ;
     }
 
@@ -46,34 +46,25 @@ void RegisterWindow::on_register_2_clicked()
     {
         if(usernames[i]==username)
         {
-           ui->message->setVisible(true) ;
+            ui->message->setVisible(true) ;
             ui->message->setText(" username already exists") ;
-           return ;
+            return ;
         }
     }
     if (password != repassword) {
-        ui->message->setVisible(true);
-        ui->message->setText("Passwords do not match");
+        ui->message2->setVisible(true);
+        ui->message2->setText("Passwords do not match");
         return;
     }
 
 
-    bool ok;
-    int year = year1.toInt(&ok);
-    if (!ok) {
-        ui->message->setVisible(true);
-        ui->message->setText("Invalid birth year");
-        return;
-    }
 
 
-    QDate currentDate = QDate::currentDate();
-    int currentYear = currentDate.year();
-    int age = currentYear - year;
-    if (age < 12) {
-        ui->message->setVisible(true);
-        ui->message->setText("You must be at least 12 years old");
-        return;
+
+    if((2024-year)<12)
+    {
+        ui->year1->setVisible(true);
+        ui-> year1->setText(" you must be atleast 12 years old");
     }
 
 

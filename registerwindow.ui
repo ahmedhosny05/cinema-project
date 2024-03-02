@@ -251,7 +251,7 @@
     <string>Female</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_9">
+  <widget class="QLabel" name="year1">
    <property name="geometry">
     <rect>
      <x>630</x>
@@ -407,7 +407,7 @@
     <string>Register</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_12">
+  <widget class="QLabel" name="message10">
    <property name="geometry">
     <rect>
      <x>280</x>
