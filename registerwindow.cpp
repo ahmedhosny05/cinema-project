@@ -1,6 +1,7 @@
 #include "registerwindow.h"
 #include "ui_registerwindow.h"
 
+
 RegisterWindow::RegisterWindow(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::RegisterWindow)
@@ -33,6 +34,47 @@ void RegisterWindow::on_register_2_clicked()
 
     bool ok;
     int year = ui->year->text().toInt(&ok);
+
+    if(username.isEmpty()||password.isEmpty()||repassword.isEmpty()||day1.isEmpty()||year1.isEmpty())
+    {
+        ui->message->setVisible(true) ;
+        ui->message->setText(" Please fill all ") ;
+        return ;
+    }
+
+    for( int i =0 ;i<usersCount;i++)
+    {
+        if(usernames[i]==username)
+        {
+           ui->message->setVisible(true) ;
+            ui->message->setText(" username already exists") ;
+           return ;
+        }
+    }
+    if (password != repassword) {
+        ui->message->setVisible(true);
+        ui->message->setText("Passwords do not match");
+        return;
+    }
+
+
+    bool ok;
+    int year = year1.toInt(&ok);
+    if (!ok) {
+        ui->message->setVisible(true);
+        ui->message->setText("Invalid birth year");
+        return;
+    }
+
+
+    QDate currentDate = QDate::currentDate();
+    int currentYear = currentDate.year();
+    int age = currentYear - year;
+    if (age < 12) {
+        ui->message->setVisible(true);
+        ui->message->setText("You must be at least 12 years old");
+        return;
+    }
 
 
 }
