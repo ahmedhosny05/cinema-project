@@ -18,7 +18,7 @@ public:
     ~LoginWindow();
 
 private slots:
-    void on_status_linkActivated(const QString &link);
+
 
     void on_login_clicked();
 
