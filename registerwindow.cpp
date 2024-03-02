@@ -22,30 +22,19 @@ RegisterWindow::~RegisterWindow()
 
 void RegisterWindow::on_register_2_clicked()
 {
-    QString username = ui->username1->text() ;
-    QString password = ui->password1->text() ;
-    QString repassword = ui->repassword->text() ;
-    QString day1 =ui->day->text() ;
-    QString year1 = ui->year->text() ;
-    QString  month =ui-> monthcombo ->currentText() ;
+    QString username = ui->username1->text();
+    QString password = ui->password1->text();
+    QString repassword = ui->repassword->text();
+    QString day1 = ui->day->text();
+    QString year1 = ui->year->text();
+    bool gender1 = ui-> gender->isChecked() ;
+    bool account1 =ui->account->isChecked() ;
+    bool genre = ui -> genrebox-> isChecked() ;
 
-    Qstring gender ;
-    if(ui->male->isChecked())
-    {
-        gender = "Male" ;
-    } else if(ui->female->isChecked())
-    {
-        gender="Female" ;
-    }
+    bool ok;
+    int year = ui->year->text().toInt(&ok);
 
-    QString account ;
-    if(ui->user->isChecked())
-    {
-        account = "User" ;
-    }
-    else if(ui->admin->isChecked())
-    {
-        account = "Admin" ;
-    }
+
 }
+
 

@@ -39,7 +39,7 @@
     <string>Password</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="usename1">
+  <widget class="QLineEdit" name="username1">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -181,17 +181,17 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QComboBox" name="ComboBox">
+   <widget class="QComboBox" name="monthcombo">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>60</y>
       <width>80</width>
       <height>26</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="day">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -201,7 +201,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="year">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -225,7 +225,7 @@
     <string>Gender</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton">
+  <widget class="QRadioButton" name="male">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -238,7 +238,7 @@
     <string>Male</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_2">
+  <widget class="QRadioButton" name="female">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -249,22 +249,6 @@
    </property>
    <property name="text">
     <string>Female</string>
-   </property>
-  </widget>
-  <widget class="QFrame" name="GroupBox">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>370</y>
-     <width>101</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
    </property>
   </widget>
   <widget class="QLabel" name="label_9">
@@ -293,7 +277,7 @@
     <string>Account Type</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_3">
+  <widget class="QRadioButton" name="user">
    <property name="geometry">
     <rect>
      <x>500</x>
@@ -306,7 +290,7 @@
     <string>User</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_4">
+  <widget class="QRadioButton" name="admin">
    <property name="geometry">
     <rect>
      <x>500</x>
@@ -317,22 +301,6 @@
    </property>
    <property name="text">
     <string>Admin</string>
-   </property>
-  </widget>
-  <widget class="QFrame" name="GroupBox_2">
-   <property name="geometry">
-    <rect>
-     <x>500</x>
-     <y>370</y>
-     <width>120</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
    </property>
   </widget>
   <widget class="QLabel" name="label_11">
@@ -348,7 +316,7 @@
     <string>Favourite Genre(s)</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox">
+  <widget class="QCheckBox" name="action">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -361,7 +329,7 @@
     <string>Action</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_2">
+  <widget class="QCheckBox" name="comedy">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -387,7 +355,7 @@
     <string>Romance</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_4">
+  <widget class="QCheckBox" name="drama">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -400,7 +368,7 @@
     <string>Drama</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox_5">
+  <widget class="QCheckBox" name="horror">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -424,22 +392,6 @@
    </property>
    <property name="text">
     <string>Other</string>
-   </property>
-  </widget>
-  <widget class="QFrame" name="CheckBox">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>470</y>
-     <width>151</width>
-     <height>91</height>
-    </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
    </property>
   </widget>
   <widget class="QPushButton" name="register_2">
@@ -466,6 +418,45 @@
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;* All fields must be filled &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="gender">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>390</y>
+     <width>120</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="account">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>380</y>
+     <width>120</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="genrebox">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>490</y>
+     <width>120</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
    </property>
   </widget>
  </widget>
