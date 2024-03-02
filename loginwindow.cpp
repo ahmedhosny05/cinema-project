@@ -27,7 +27,8 @@ void LoginWindow::on_login_clicked()
         if((ui->username->text())==usernames[i]&&(ui->password->text())==passwords[i])
         {
             hide() ;
-            WelcomeWindow* p = new WelcomeWindow(this) ;
+            WelcomeWindow *p = new WelcomeWindow(usernames[i], ages[i], this);
+
             p-> show() ;
         }
         else
