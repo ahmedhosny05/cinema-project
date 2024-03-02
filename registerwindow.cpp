@@ -73,7 +73,7 @@ void RegisterWindow::on_register_2_clicked()
     if (age < 12) {
         ui->message->setVisible(true);
         ui->message->setText("You must be at least 12 years old");
-        return;
+        return;.
     }
 
 
