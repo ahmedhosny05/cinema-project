@@ -7,6 +7,10 @@ RegisterWindow::RegisterWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui-> message -> setVisible(false);
+    ui->message2->setVisible(false) ;
+    ui->label_9->setVisible(false) ;
+    ui->label_12->setVisible(false) ;
+
 
 
 }
