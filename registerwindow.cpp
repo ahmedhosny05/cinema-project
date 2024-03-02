@@ -60,11 +60,21 @@ void RegisterWindow::on_register_2_clicked()
 
 
 
+<<<<<<< HEAD
 
     if((2024-year)<12)
     {
         ui->year1->setVisible(true);
         ui-> year1->setText(" you must be atleast 12 years old");
+=======
+    QDate currentDate = QDate::currentDate();
+    int currentYear = currentDate.year();
+    int age = currentYear - year;
+    if (age < 12) {
+        ui->message->setVisible(true);
+        ui->message->setText("You must be at least 12 years old");
+        return;.
+>>>>>>> 42b40846994880497d924746675ef1a117c17e53
     }
 
 
