@@ -293,7 +293,7 @@
     <string>Account Type</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_3">
+  <widget class="QRadioButton" name="user">
    <property name="geometry">
     <rect>
      <x>500</x>
@@ -306,7 +306,7 @@
     <string>User</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_4">
+  <widget class="QRadioButton" name="admin">
    <property name="geometry">
     <rect>
      <x>500</x>
@@ -322,8 +322,8 @@
   <widget class="QFrame" name="GroupBox_2">
    <property name="geometry">
     <rect>
-     <x>500</x>
-     <y>370</y>
+     <x>480</x>
+     <y>380</y>
      <width>120</width>
      <height>80</height>
     </rect>
