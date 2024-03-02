@@ -6,6 +6,9 @@ RegisterWindow::RegisterWindow(QWidget *parent)
     , ui(new Ui::RegisterWindow)
 {
     ui->setupUi(this);
+    ui-> message -> setVisible(false);
+
+
 }
 
 RegisterWindow::~RegisterWindow()
