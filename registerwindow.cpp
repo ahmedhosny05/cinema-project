@@ -28,10 +28,20 @@ void RegisterWindow::on_register_2_clicked()
     QString repassword = ui->repassword->text();
     QString day1 = ui->day->text();
     QString year1 = ui->year->text();
-    bool gender1 = ui-> gender->isChecked() ;
-    bool account1 =ui->account->isChecked() ;
-    bool genre = ui -> genrebox-> isChecked() ;
-    QString selectedOption = ui->monthcombo->currentText();
+    QString month1 =ui->monthcombo->currentText() ;
+    bool gender1 = ui-> male-> isChecked() ;
+    bool gender2 =ui-> female-> isChecked() ;
+    bool user1 = ui-> user-> isChecked() ;
+    bool user2 = ui-> admin -> isChecked();
+    bool action1 = ui->action -> isChecked() ;
+    bool drama1 =ui ->drama -> isChecked() ;
+    bool horror1 = ui->horror->isChecked() ;
+    bool comedy1 =ui->comedy->isChecked() ;
+    bool romance1=ui->romance->isChecked() ;
+    bool other1 =ui->other->isChecked()  ;
+
+
+
 
     bool ok;
     int year = ui->year->text().toInt(&ok);
