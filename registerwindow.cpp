@@ -39,6 +39,10 @@ void RegisterWindow::on_register_2_clicked()
     bool comedy1 =ui->comedy->isChecked() ;
     bool romance1=ui->romance->isChecked() ;
     bool other1 =ui->other->isChecked()  ;
+    ui->message->setText("") ;
+    ui->message2->setText("") ;
+    ui-> year1->setText("") ;
+    ui->message10->setText("") ;
 
 
 
@@ -86,12 +90,11 @@ void RegisterWindow::on_register_2_clicked()
         ui->message10->setVisible(true);
         ui->message10->setText(" You registered successfully");
 
-        // Show WelcomeWindow and pass current username and age
-
     }
     else
     {
         ui->message10->setVisible(true);
         ui->message10->setText(" Maximum number reached");
     }
+
 }
