@@ -66,11 +66,7 @@ void RegisterWindow::on_register_2_clicked()
 
     for(int i=0 ;i<usersCount;i++)
     {
-<<<<<<< HEAD
         usernames[usersCount] = username;
-=======
-         usernames[usersCount] = username;
->>>>>>> d70a32a717dafbd9627c8e27f079824579b9cc25
     }
 
 }
