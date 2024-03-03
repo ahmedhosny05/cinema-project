@@ -45,38 +45,53 @@ void RegisterWindow::on_register_2_clicked()
 
     bool ok;
     int year = ui->year->text().toInt(&ok);
-    if(username.isEmpty()||password.isEmpty()||repassword.isEmpty()||day1.isEmpty()||year1.isEmpty())
+    if (username.isEmpty() || password.isEmpty() || repassword.isEmpty() || day1.isEmpty() || year1.isEmpty())
     {
-        ui->message10->setVisible(true) ;
-        ui->message10->setText(" Please fill all ") ;
-        return ;
+        ui->message10->setVisible(true);
+        ui->message10->setText(" Please fill all ");
+        return;
     }
 
-    for( int i =0 ;i<usersCount;i++)
+    for (int i = 0; i < usersCount; i++)
     {
-        if(usernames[i]==username)
+        if (usernames[i] == username)
         {
-            ui->message->setVisible(true) ;
-            ui->message->setText(" username already exists") ;
-            return ;
+            ui->message->setVisible(true);
+            ui->message->setText(" username already exists");
+            return;
         }
     }
-    if (password != repassword) {
+    if (password != repassword)
+    {
         ui->message2->setVisible(true);
         ui->message2->setText("Passwords do not match");
         return;
     }
 
-
-    if((2024-year)<12)
+    int currentYear = 2024;
+    int age = currentYear - year;
+    if (age < 12)
     {
         ui->year1->setVisible(true);
-        ui-> year1->setText(" you must be atleast 12 years old");
+        ui->year1->setText(" you must be at least 12 years old");
+        return;
     }
 
-    for(int i=0 ;i<usersCount;i++)
+    if (usersCount < 100)
     {
         usernames[usersCount] = username;
-    }
+        passwords[usersCount] = password;
+        ages[usersCount] = age;
+        ++usersCount;
+        ui->message10->setVisible(true);
+        ui->message10->setText(" You registered successfully");
 
+        // Show WelcomeWindow and pass current username and age
+
+    }
+    else
+    {
+        ui->message10->setVisible(true);
+        ui->message10->setText(" Maximum number reached");
+    }
 }
