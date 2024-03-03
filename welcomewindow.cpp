@@ -8,7 +8,7 @@ WelcomeWindow::WelcomeWindow(const QString& username, int age, QWidget *parent)
 {
     ui->setupUi(this);
 
-    QPixmap pix("C:\\Users\\dell\\Desktop\\istockphoto-1396162151-612x612.jpg");
+    QPixmap pix(":/new/imag/istockphoto-1396162151-612x612.jpg");
     int w = ui->image->width();
     int l = ui->image->height();
     ui->image->setPixmap(pix.scaled(w, l, Qt::KeepAspectRatio));
