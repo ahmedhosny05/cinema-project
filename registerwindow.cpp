@@ -1,6 +1,7 @@
 #include "registerwindow.h"
 #include "ui_registerwindow.h"
 #include "Users.h"
+#include "welcomewindow.h"
 
 RegisterWindow::RegisterWindow(QWidget *parent)
     : QDialog(parent)
@@ -87,9 +88,10 @@ void RegisterWindow::on_register_2_clicked()
         passwords[usersCount] = password;
         ages[usersCount] = age;
         ++usersCount;
-        ui->message10->setVisible(true);
-        ui->message10->setText(" You registered successfully");
+        WelcomeWindow* welc = new WelcomeWindow(username, age, this);
 
+        hide();
+        welc->show();
     }
     else
     {
